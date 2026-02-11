@@ -24,8 +24,8 @@ EOT
     kusto_cluster_uri               = string
     kusto_database_name             = string
     name                            = string
-    eventhub_consumer_group_name    = optional(string, "$Default")
-    kusto_table_name                = optional(string, "AdtPropertyEvents")
+    eventhub_consumer_group_name    = optional(string) # Default: "$Default"
+    kusto_table_name                = optional(string) # Default: "AdtPropertyEvents"
   }))
 }
 
