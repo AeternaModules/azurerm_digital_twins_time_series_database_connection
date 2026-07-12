@@ -1,3 +1,7 @@
+output "digital_twins_time_series_database_connections_id" {
+  description = "Map of id values across all digital_twins_time_series_database_connections, keyed the same as var.digital_twins_time_series_database_connections"
+  value       = { for k, v in azurerm_digital_twins_time_series_database_connection.digital_twins_time_series_database_connections : k => v.id }
+}
 output "digital_twins_time_series_database_connections_digital_twins_id" {
   description = "Map of digital_twins_id values across all digital_twins_time_series_database_connections, keyed the same as var.digital_twins_time_series_database_connections"
   value       = { for k, v in azurerm_digital_twins_time_series_database_connection.digital_twins_time_series_database_connections : k => v.digital_twins_id }
